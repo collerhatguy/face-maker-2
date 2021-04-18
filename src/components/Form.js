@@ -1,27 +1,7 @@
 
-import React, {useReducer, useEffect} from 'react'
-const ACTIONS = {
-    setHair: "set-hair",
-    setHead: "set-head",
-    setEars: "set-ears",
-    setHair: "set-hair",
-    setHair: "set-hair",
-    setHair: "set-hair",
-} 
-function reducer(state, action) {
-    switch (action.type) {
-        case ACTIONS.setHair:
-            return {
-                ...state,
-                hair: {
-                    color: action.payload.color
-                }
-            }
-    }
+import React from 'react'
 
-}
-export default function Form() {
-    const [state, dispatch] = useReducer(reducer, {});
+export default function Form({dispatch, ACTIONS}) {
     const changeHair = (value) => {
         dispatch({
             type: ACTIONS.setHair, 
@@ -30,9 +10,6 @@ export default function Form() {
             }
         })
     }
-    useEffect(() => {
-        console.log(state);
-    }, [state]);
     return (
         <form>
             <feildset>
