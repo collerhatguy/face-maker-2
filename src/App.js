@@ -21,7 +21,15 @@ function reducer(state, action) {
   }
 }
 function App() {
-  const intialState = {}
+  const intialState = {
+    hair: {},
+    head: {},
+    brows: {},
+    eyes: {},
+    ears: {},
+    nose: {},
+    mouth: {},
+  }
   const [face, dispatch] = useReducer(reducer, intialState);
   
   useEffect(() => {
