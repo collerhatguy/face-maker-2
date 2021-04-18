@@ -19,7 +19,6 @@ export default function Head({face}) {
                 <div class="brow"></div>
             </div>
             <div 
-                style={face.eyes}
                 class="eyes">
                 <div class="eye"></div>
                 <div class="eye"></div>

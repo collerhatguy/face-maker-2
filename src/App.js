@@ -18,6 +18,34 @@ function reducer(state, action) {
                   backgroundColor: action.payload.color
               }
           }
+      case ACTIONS.setHead:
+          return {
+              ...state,
+              head: {
+                  backgroundColor: action.payload.color
+              }
+          }
+      case ACTIONS.setEyes:
+          return {
+              ...state,
+              eyes: {
+                  backgroundColor: action.payload.color
+              }
+          }
+      case ACTIONS.setEars:
+          return {
+              ...state,
+              ears: {
+                  backgroundColor: action.payload.color
+              }
+          }
+      case ACTIONS.setMouth:
+          return {
+              ...state,
+              mouth: {
+                  backgroundColor: action.payload.color
+              }
+          }
   }
 }
 function App() {
