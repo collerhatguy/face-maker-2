@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Head() {
+export default function Head({face}) {
     return (
         <div class="head">
-            <div class="hair">
+            <div
+                style={face.hair} 
+                class="hair">
                 <div class="hair-corner"></div>
             </div>
             <div class="brows">

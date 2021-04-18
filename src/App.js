@@ -15,7 +15,7 @@ function reducer(state, action) {
           return {
               ...state,
               hair: {
-                  color: action.payload.color
+                  backgroundColor: action.payload.color
               }
           }
   }
