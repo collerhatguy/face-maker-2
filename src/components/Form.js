@@ -1,5 +1,6 @@
 
 import React from 'react'
+import ColorInput from './ColorInput'
 
 export default function Form({dispatch, ACTIONS}) {
     const changeHair = (value) => {
@@ -14,13 +15,7 @@ export default function Form({dispatch, ACTIONS}) {
         <form>
             <feildset>
                 <legend>Hair</legend>
-                <label for="hair-color">Color: </label>
-                <input 
-                    type="color"
-                    id="hair-color"
-                    name="hair-color"
-                    onChange={e => {changeHair(e.target.value)}}
-                />
+                    <ColorInput bodyPart="hair" changeColor={changeHair} />
             </feildset>
         </form>
     )
