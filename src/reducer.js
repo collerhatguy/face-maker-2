@@ -1,5 +1,5 @@
 
-const ACTIONS = {
+export const ACTIONS = {
     setHairColor: "set-hair-color",
     setHairWidth: "set-hair-width",
     setHairHeight: "set-hair-height",
@@ -15,6 +15,9 @@ const ACTIONS = {
     setMouthColor: "set-mouth-color",
     setMouthWidth: "set-mouth-width",
     setMouthHeight: "set-mouth-height",
+    setEarsColor: "set-ears-color",
+    setEarsWidth: "set-ears-width",
+    setEarsHeight: "set-ears-height",
     setEars: "set-eyes",
     setMouth: "set-mouth",
     setEars: "set-ears",
@@ -140,6 +143,30 @@ export default function reducer(state, action) {
                 ...state,
                 mouth: {
                     ...state.mouth,
+                    height: action.payload.value,
+                }
+            }
+        case ACTIONS.setEarsColor:
+            return {
+                ...state,
+                ears: {
+                    ...state.ears,
+                    backgroundColor: action.payload.value,
+                }
+            }
+        case ACTIONS.setEarsWidth:
+            return {
+                ...state,
+                ears: {
+                    ...state.ears,
+                    width: action.payload.value,
+                }
+            }
+        case ACTIONS.setEarsHeight:
+            return {
+                ...state,
+                ears: {
+                    ...state.ears,
                     height: action.payload.value,
                 }
             }

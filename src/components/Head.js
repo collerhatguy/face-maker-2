@@ -45,10 +45,13 @@ export default function Head({face}) {
                 style={face.mouth}
                 class="mouth"></div>
             <div 
-                style={face.ears}
                 class="ears">
-                <div class="ear"></div>
-                <div class="ear"></div>
+                <div 
+                    style={face.ears}
+                    class="ear"></div>
+                <div 
+                    style={face.ears}
+                    class="ear"></div>
             </div>
       </div>
     )
