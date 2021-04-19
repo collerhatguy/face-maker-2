@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-  body {
+  .App {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,4 +178,22 @@
     left: initial;
     right: 5px;
     transform: rotate(-45deg);
+  }
+
+  form {
+    padding: .2em;
+    margin: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    fieldset {
+      font-size: 20px;
+    }
+    input {
+      width: 20px;
+      height: 15px;
+      padding: .2em;
+      margin: .2em;
+    }
   }

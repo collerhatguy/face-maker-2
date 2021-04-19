@@ -14,7 +14,7 @@ export default function Form({dispatch, ACTIONS}) {
     }
     return (
         <form>
-            <feildset>
+            <fieldset>
                 <legend>Hair</legend>
                 <ColorInput 
                     bodyPart="hair" 
@@ -25,8 +25,8 @@ export default function Form({dispatch, ACTIONS}) {
                     changeWidth={(value) => changePart(value, ACTIONS.setHairWidth)} 
                     changeHeight={(value) => changePart(value, ACTIONS.setHairHeight)}
                 /> 
-            </feildset>
-            <feildset>
+            </fieldset>
+            <fieldset>
                 <legend>Head</legend>
                 <ColorInput 
                     bodyPart="head"  
@@ -37,8 +37,8 @@ export default function Form({dispatch, ACTIONS}) {
                     changeWidth={(value) => changePart(value, ACTIONS.setHeadWidth)} 
                     changeHeight={(value) => changePart(value, ACTIONS.setHeadHeight)}
                 /> 
-            </feildset>
-            <feildset>
+            </fieldset>
+            <fieldset>
                 <legend>Eyes</legend>
                 <ColorInput 
                     bodyPart="eyes"  
@@ -49,8 +49,8 @@ export default function Form({dispatch, ACTIONS}) {
                     changeWidth={(value) => changePart(value, ACTIONS.setEyeWidth)} 
                     changeHeight={(value) => changePart(value, ACTIONS.setEyeHeight)}
                 /> 
-            </feildset>
-            <feildset>
+            </fieldset>
+            <fieldset>
                 <legend>Nose</legend>
                 <ColorInput 
                     bodyPart="nose"  
@@ -61,8 +61,8 @@ export default function Form({dispatch, ACTIONS}) {
                     changeWidth={(value) => changePart(value, ACTIONS.setNoseWidth)} 
                     changeHeight={(value) => changePart(value, ACTIONS.setNoseHeight)}
                 /> 
-            </feildset>
-            <feildset>
+            </fieldset>
+            <fieldset>
                 <legend>Mouth</legend>
                 <ColorInput 
                     bodyPart="mouth"  
@@ -73,8 +73,8 @@ export default function Form({dispatch, ACTIONS}) {
                     changeWidth={(value) => changePart(value, ACTIONS.setMouthWidth)} 
                     changeHeight={(value) => changePart(value, ACTIONS.setMouthHeight)}
                 /> 
-            </feildset>
-            <feildset>
+            </fieldset>
+            <fieldset>
                 <legend>Ears</legend>
                 <ColorInput 
                     bodyPart="ears"  
@@ -85,7 +85,7 @@ export default function Form({dispatch, ACTIONS}) {
                     changeWidth={(value) => changePart(value, ACTIONS.setEarsWidth)} 
                     changeHeight={(value) => changePart(value, ACTIONS.setEarsHeight)}
                 /> 
-            </feildset>
+            </fieldset>
         </form>
     )
 }
