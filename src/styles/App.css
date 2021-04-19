@@ -21,10 +21,6 @@
 }
 
 .head {
-  background: #f8d8c9;
-  width: 300px;
-  height: 340px;
-  border-radius: 70% 70% 100% 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +30,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #f8d8c9;
+  width: 300px;
+  height: 340px;
+  border-radius: 70% 70% 100% 100%;
 }
 
 .eyes, .brows {
@@ -48,12 +48,6 @@
 }
 
 .eye {
-  background-color: white;
-  height: 40px;
-  width: 65px;
-  border-radius: 100%;
-  border-top: 3px solid #d3a088;
-  border-bottom: 3px solid #d3a088;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,26 +57,32 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  height: 40px;
+  width: 65px;
+  border-radius: 100%;
+  border-top: 3px solid #d3a088;
+  border-bottom: 3px solid #d3a088;
   overflow: hidden;
   position: relative;
 }
 
 .eye .iris {
   position: absolute;
+  border-radius: 100%;
   width: 41px;
   height: 41px;
   background-color: #6f7660;
-  border-radius: 100%;
   margin-left: 10px;
   margin-bottom: 5px;
 }
 
 .eye .pupil {
   position: absolute;
+  border-radius: 100%;
   width: 15px;
   height: 15px;
   background-color: #333;
-  border-radius: 100%;
   margin-left: 15px;
   margin-bottom: 7px;
 }
@@ -119,9 +119,9 @@
 }
 
 .ears {
-  z-index: -1;
+  z-index: 0;
   position: absolute;
-  width: 340px;
+  width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,12 +235,6 @@ form input {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .App {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 /*# sourceMappingURL=App.css.map */
