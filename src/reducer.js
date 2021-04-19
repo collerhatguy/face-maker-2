@@ -12,6 +12,9 @@ const ACTIONS = {
     setNoseColor: "set-nose-color",
     setNoseWidth: "set-nose-width",
     setNoseHeight: "set-nose-height",
+    setMouthColor: "set-mouth-color",
+    setMouthWidth: "set-mouth-width",
+    setMouthHeight: "set-mouth-height",
     setEars: "set-eyes",
     setMouth: "set-mouth",
     setEars: "set-ears",
@@ -113,6 +116,30 @@ export default function reducer(state, action) {
                 ...state,
                 nose: {
                     ...state.nose,
+                    height: action.payload.value,
+                }
+            }
+        case ACTIONS.setMouthColor:
+            return {
+                ...state,
+                mouth: {
+                    ...state.mouth,
+                    backgroundColor: action.payload.value,
+                }
+            }
+        case ACTIONS.setMouthWidth:
+            return {
+                ...state,
+                mouth: {
+                    ...state.mouth,
+                    width: action.payload.value,
+                }
+            }
+        case ACTIONS.setMouthHeight:
+            return {
+                ...state,
+                mouth: {
+                    ...state.mouth,
                     height: action.payload.value,
                 }
             }
