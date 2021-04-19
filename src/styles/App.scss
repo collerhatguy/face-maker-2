@@ -1,199 +1,76 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  .App {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    background-color: hsl(200, 50%, 82%);
-  }
-  
-  .head {
-    background: hsl(19, 76%, 88%);
-    width: 300px;
-    height: 340px;
-    border-radius: 70% 70% 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .eyes, .brows {
-    position: absolute;
-    width: 195px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .eye {
-    background-color: white;
-    height: 40px;
-    width: 65px;
-    border-radius: 100%;
-    border-top: 3px solid hsl(19, 46%, 68%);
-    border-bottom: 3px solid hsl(19, 46%, 68%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    .iris {
-      position: absolute;
-      width: 41px;
-      height: 41px;
-      background-color: hsl(78, 10%, 42%);
-      border-radius: 100%;
-      margin-left: 10px;
-      margin-bottom: 5px;
-    }
-    .pupil {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      background-color: #333;
-      border-radius: 100%;
-      margin-left: 15px;
-      margin-bottom: 7px;
-    }
-  }
-  
-  // .eye::before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 41px;
-  //   height: 41px;
-  //   background-color: hsl(78, 10%, 42%);
-  //   border-radius: 100%;
-  //   margin-left: 10px;
-  //   margin-bottom: 5px;
-  // }
-  
-  // .eye::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 15px;
-  //   height: 15px;
-  //   background-color: #333;
-  //   border-radius: 100%;
-  //   margin-left: 15px;
-  //   margin-bottom: 7px;
-  // }
-  
-  .brow {
-    width: 65px;
-    height: 32px;
-    border-top: 10px solid hsl(27, 33%, 28%);
-    border-radius: 100%;
-    margin-bottom: 35px;
-  }
-  
-  .nose {
-    position: absolute;
-    border: 4px solid hsl(19, 46%, 68%);
-    width: 40px;
-    height: 30px;
-    border-radius: 0 0 100% 100%;
-    border-top: none;
-    margin-top: 100px;
-  }
-  
-  .mouth {
-    position: absolute;
-    width: 100px;
-    height: 40px;
-    background: white;
-    margin-top: 225px;
-    border-radius: 20% 20% 100% 100%;
-    border: 4px solid hsl(19, 46%, 68%);
-    border-right-width: 1px;
-    border-left-width: 1px;
-    border-top-width: 2px;
-  }
-  
-  .ears {
-    z-index: -1;
-    position: absolute;
-    width: 340px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .ear {
-    width: 25px;
-    height: 70px;
-    border: 2px solid hsl(19, 46%, 68%);
-    background: hsl(19, 76%, 85%);
-    border-radius: 0 100% 100% 0;
-  }
-  
-  .ear:first-child {
-    border-radius: 100% 0 0 100%;
-  }
-  
-  .hair {
-    position: absolute;
-    width: 300px;
-    height: 125px;
-    background-color: hsl(27, 33%, 28%);
-    margin-bottom: 300px;
-    border-radius: 50% 100% 0 0;
-  }
-  
-  .hair::before,
-  .hair::after {
-    content: '';
-    position: absolute;
-    background-color: hsl(27, 33%, 28%);
-    height: 100px;
-    width: 10px;
-    transform: translateY(100%);
-  }
-  
-  .hair::after {
-    right: 0;
-  }
-  
-  .hair-corner {
-    position: absolute;
-    width: 100%;
-  }
-  
-  .hair-corner::before,
-  .hair-corner::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 20px;
-    transform: rotate(45deg);
-    background-color: hsl(27, 33%, 28%);
-    top: 115px;
-    left: 5px;
-  }
-  
-  .hair-corner::after {
-    left: initial;
-    right: 5px;
-    transform: rotate(-45deg);
-  }
 
-  form {
+// table of contents
+// 1. default stats
+// 2. variables
+// 3. mixins
+// 4. centering
+// 5. form
+// 6. media queries
+
+// 1. default stats
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// 2. variables
+$primary-color: hsl(200, 50%, 82%);
+$secondary-color: hsl(200, 50%, 12%);
+$base-font-size: 10px;
+
+// 3. mixins
+@mixin font-size($size) {
+  font-size: $base-font-size * 1.618 * $size;
+}
+
+// 4. centering
+.head-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+}
+
+@import "./faceDefault";
+  
+// 5. form
+form {
+  padding: .2em;
+  margin: .2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: $secondary-color;
+  fieldset {
+    @include font-size(3);
+    color: $primary-color;
     padding: .2em;
     margin: .2em;
+  }
+  label {
+    @include font-size(2);
+  }
+  input {
+    @include font-size(2);
+    width: 100px;
+    height: 30px;
+    padding: .2em;
+    margin: .2em;
+  }
+}
+
+// 6. media queries
+@media only screen and (max-width: 480px) {
+  form {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    fieldset {
-      font-size: 20px;
-    }
-    input {
-      width: 20px;
-      height: 15px;
-      padding: .2em;
-      margin: .2em;
-    }
+    flex-wrap: wrap;
   }
+  .App {
+    flex-direction: column;
+  }
+}
