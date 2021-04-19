@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/face-maker-2/static/css/main.02bc5ff8.chunk.css",
-    "main.js": "/face-maker-2/static/js/main.e3e2dd77.chunk.js",
-    "main.js.map": "/face-maker-2/static/js/main.e3e2dd77.chunk.js.map",
+    "main.js": "/face-maker-2/static/js/main.07eeab1e.chunk.js",
+    "main.js.map": "/face-maker-2/static/js/main.07eeab1e.chunk.js.map",
     "runtime-main.js": "/face-maker-2/static/js/runtime-main.e44a932e.js",
     "runtime-main.js.map": "/face-maker-2/static/js/runtime-main.e44a932e.js.map",
     "static/js/2.a48f0da4.chunk.js": "/face-maker-2/static/js/2.a48f0da4.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.e44a932e.js",
     "static/js/2.a48f0da4.chunk.js",
     "static/css/main.02bc5ff8.chunk.css",
-    "static/js/main.e3e2dd77.chunk.js"
+    "static/js/main.07eeab1e.chunk.js"
   ]
 }
