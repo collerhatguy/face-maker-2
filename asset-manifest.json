@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/face-maker-2/static/css/main.16a92697.chunk.css",
-    "main.js": "/face-maker-2/static/js/main.ee4e7484.chunk.js",
-    "main.js.map": "/face-maker-2/static/js/main.ee4e7484.chunk.js.map",
+    "main.css": "/face-maker-2/static/css/main.5526099e.chunk.css",
+    "main.js": "/face-maker-2/static/js/main.e3e2dd77.chunk.js",
+    "main.js.map": "/face-maker-2/static/js/main.e3e2dd77.chunk.js.map",
     "runtime-main.js": "/face-maker-2/static/js/runtime-main.e44a932e.js",
     "runtime-main.js.map": "/face-maker-2/static/js/runtime-main.e44a932e.js.map",
-    "static/js/2.9aff7022.chunk.js": "/face-maker-2/static/js/2.9aff7022.chunk.js",
-    "static/js/2.9aff7022.chunk.js.map": "/face-maker-2/static/js/2.9aff7022.chunk.js.map",
+    "static/js/2.a48f0da4.chunk.js": "/face-maker-2/static/js/2.a48f0da4.chunk.js",
+    "static/js/2.a48f0da4.chunk.js.map": "/face-maker-2/static/js/2.a48f0da4.chunk.js.map",
     "index.html": "/face-maker-2/index.html",
-    "static/css/main.16a92697.chunk.css.map": "/face-maker-2/static/css/main.16a92697.chunk.css.map",
-    "static/js/2.9aff7022.chunk.js.LICENSE.txt": "/face-maker-2/static/js/2.9aff7022.chunk.js.LICENSE.txt"
+    "static/css/main.5526099e.chunk.css.map": "/face-maker-2/static/css/main.5526099e.chunk.css.map",
+    "static/js/2.a48f0da4.chunk.js.LICENSE.txt": "/face-maker-2/static/js/2.a48f0da4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e44a932e.js",
-    "static/js/2.9aff7022.chunk.js",
-    "static/css/main.16a92697.chunk.css",
-    "static/js/main.ee4e7484.chunk.js"
+    "static/js/2.a48f0da4.chunk.js",
+    "static/css/main.5526099e.chunk.css",
+    "static/js/main.e3e2dd77.chunk.js"
   ]
 }
