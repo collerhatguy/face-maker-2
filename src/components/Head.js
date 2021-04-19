@@ -20,8 +20,14 @@ export default function Head({face}) {
             </div>
             <div 
                 class="eyes">
-                <div class="eye"></div>
-                <div class="eye"></div>
+                <div class="eye">
+                    <div className="iris"></div>
+                    <div className="pupil"></div>
+                </div>
+                <div class="eye">
+                    <div className="iris"></div>
+                    <div className="pupil"></div>
+                </div>
             </div>
             <div 
                 style={face.nose}

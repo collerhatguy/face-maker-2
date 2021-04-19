@@ -66,8 +66,7 @@ body {
   position: relative;
 }
 
-.eye::before {
-  content: '';
+.eye .iris {
   position: absolute;
   width: 41px;
   height: 41px;
@@ -77,8 +76,7 @@ body {
   margin-bottom: 5px;
 }
 
-.eye::after {
-  content: '';
+.eye .pupil {
   position: absolute;
   width: 15px;
   height: 15px;

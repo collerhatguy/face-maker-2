@@ -41,29 +41,47 @@
     align-items: center;
     overflow: hidden;
     position: relative;
+    .iris {
+      position: absolute;
+      width: 41px;
+      height: 41px;
+      background-color: hsl(78, 10%, 42%);
+      border-radius: 100%;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+    .pupil {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #333;
+      border-radius: 100%;
+      margin-left: 15px;
+      margin-bottom: 7px;
+    }
   }
   
-  .eye::before {
-    content: '';
-    position: absolute;
-    width: 41px;
-    height: 41px;
-    background-color: hsl(78, 10%, 42%);
-    border-radius: 100%;
-    margin-left: 10px;
-    margin-bottom: 5px;
-  }
+  // .eye::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 41px;
+  //   height: 41px;
+  //   background-color: hsl(78, 10%, 42%);
+  //   border-radius: 100%;
+  //   margin-left: 10px;
+  //   margin-bottom: 5px;
+  // }
   
-  .eye::after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #333;
-    border-radius: 100%;
-    margin-left: 15px;
-    margin-bottom: 7px;
-  }
+  // .eye::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 15px;
+  //   height: 15px;
+  //   background-color: #333;
+  //   border-radius: 100%;
+  //   margin-left: 15px;
+  //   margin-bottom: 7px;
+  // }
   
   .brow {
     width: 65px;
