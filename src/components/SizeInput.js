@@ -1,6 +1,22 @@
 import React from 'react'
 
-export default function SizeInput({bodyPart, changeHeight, changeWidth}) {
+export default function SizeInput({bodyPart, dispatch, ACTIONS}) {
+    const changeWidth = (value) => {
+        dispatch({
+            type: ACTIONS[bodyPart]["width"], 
+            payload: {
+                value: value
+            }
+        })
+    }
+    const changeHeight = (value) => {
+        dispatch({
+            type: ACTIONS[bodyPart]["height"], 
+            payload: {
+                value: value
+            }
+        })
+    }
     return (
         <div>
             <div>

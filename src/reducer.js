@@ -1,30 +1,44 @@
 
 export const ACTIONS = {
-    setHairColor: "set-hair-color",
-    setHairWidth: "set-hair-width",
-    setHairHeight: "set-hair-height",
-    setHeadColor: "set-head-color",
-    setHeadWidth: "set-head-width",
-    setHeadHeight: "set-head-height",
-    setEyeColor: "set-eye-color",
-    setEyeWidth: "set-eye-width",
-    setEyeHeight: "set-eye-height",
-    setNoseColor: "set-nose-color",
-    setNoseWidth: "set-nose-width",
-    setNoseHeight: "set-nose-height",
-    setMouthColor: "set-mouth-color",
-    setMouthWidth: "set-mouth-width",
-    setMouthHeight: "set-mouth-height",
-    setEarsColor: "set-ears-color",
-    setEarsWidth: "set-ears-width",
-    setEarsHeight: "set-ears-height",
-    setEars: "set-eyes",
-    setMouth: "set-mouth",
-    setEars: "set-ears",
+    hair: {
+        color: "set-hair-color",
+        width: "set-hair-width",
+        height: "set-hair-height",
+    },
+    head: {
+        color: "set-head-color",
+        width: "set-head-width",
+        height: "set-head-height",
+    },
+    eyes: {
+        color: "set-eye-color",
+        width: "set-eye-width",
+        height: "set-eye-height",
+    },
+    nose: {
+        color: "set-nose-color",
+        width: "set-nose-width",
+        height: "set-nose-height",
+    },
+    mouth: {
+        color: "set-mouth-color",
+        width: "set-mouth-width",
+        height: "set-mouth-height",
+    },
+    mouth: {
+        color: "set-mouth-color",
+        width: "set-mouth-width",
+        height: "set-mouth-height",
+    },
+    ears: {
+        color: "set-ears-color",
+        width: "set-ears-width",
+        height: "set-ears-height",
+    },
 } 
 export default function reducer(state, action) {
     switch (action.type) {
-        case ACTIONS.setHairColor:
+        case ACTIONS.hair.color:
             return {
                 ...state,
                 hair: {
@@ -32,7 +46,7 @@ export default function reducer(state, action) {
                     backgroundColor: action.payload.value
                 }
             }
-        case ACTIONS.setHairWidth:
+        case ACTIONS.hair.width:
             return {
                 ...state,
                 hair: {
@@ -40,7 +54,7 @@ export default function reducer(state, action) {
                     width: action.payload.value
                 }
             }
-        case ACTIONS.setHairHeight:
+        case ACTIONS.hair.height:
             return {
                 ...state,
                 hair: {
@@ -48,7 +62,7 @@ export default function reducer(state, action) {
                     height: action.payload.value
                 }
             }
-        case ACTIONS.setHeadColor:
+        case ACTIONS.head.color:
             return {
                 ...state,
                 head: {
@@ -56,7 +70,7 @@ export default function reducer(state, action) {
                     backgroundColor: action.payload.value
                 }
             }
-        case ACTIONS.setHeadHeight:
+        case ACTIONS.head.height:
             return {
                 ...state,
                 head: {
@@ -64,7 +78,7 @@ export default function reducer(state, action) {
                     height: action.payload.value
                 }
             }
-        case ACTIONS.setHeadWidth:
+        case ACTIONS.head.width:
             return {
                 ...state,
                 head: {
@@ -72,7 +86,7 @@ export default function reducer(state, action) {
                     width: action.payload.value
                 }
             }
-        case ACTIONS.setEyeColor:
+        case ACTIONS.eyes.color:
             return {
                 ...state,
                 eyes: {
@@ -82,7 +96,7 @@ export default function reducer(state, action) {
                     }
                 }
             }
-        case ACTIONS.setEyeWidth:
+        case ACTIONS.eyes.width:
             return {
                 ...state,
                 eyes: {
@@ -90,7 +104,7 @@ export default function reducer(state, action) {
                     width: action.payload.value,
                 }
             }
-        case ACTIONS.setEyeHeight:
+        case ACTIONS.eyes.height:
             return {
                 ...state,
                 eyes: {
@@ -98,7 +112,7 @@ export default function reducer(state, action) {
                     height: action.payload.value,
                 }
             }
-        case ACTIONS.setNoseColor:
+        case ACTIONS.nose.color:
             return {
                 ...state,
                 nose: {
@@ -106,7 +120,7 @@ export default function reducer(state, action) {
                     borderColor: action.payload.value,
                 }
             }
-        case ACTIONS.setNoseWidth:
+        case ACTIONS.nose.width:
             return {
                 ...state,
                 nose: {
@@ -114,7 +128,7 @@ export default function reducer(state, action) {
                     width: action.payload.value,
                 }
             }
-        case ACTIONS.setNoseHeight:
+        case ACTIONS.nose.height:
             return {
                 ...state,
                 nose: {
@@ -122,7 +136,7 @@ export default function reducer(state, action) {
                     height: action.payload.value,
                 }
             }
-        case ACTIONS.setMouthColor:
+        case ACTIONS.mouth.color:
             return {
                 ...state,
                 mouth: {
@@ -130,7 +144,7 @@ export default function reducer(state, action) {
                     backgroundColor: action.payload.value,
                 }
             }
-        case ACTIONS.setMouthWidth:
+        case ACTIONS.mouth.width:
             return {
                 ...state,
                 mouth: {
@@ -138,7 +152,7 @@ export default function reducer(state, action) {
                     width: action.payload.value,
                 }
             }
-        case ACTIONS.setMouthHeight:
+        case ACTIONS.mouth.height:
             return {
                 ...state,
                 mouth: {
@@ -146,7 +160,7 @@ export default function reducer(state, action) {
                     height: action.payload.value,
                 }
             }
-        case ACTIONS.setEarsColor:
+        case ACTIONS.ears.color:
             return {
                 ...state,
                 ears: {
@@ -154,7 +168,7 @@ export default function reducer(state, action) {
                     backgroundColor: action.payload.value,
                 }
             }
-        case ACTIONS.setEarsWidth:
+        case ACTIONS.ears.width:
             return {
                 ...state,
                 ears: {
@@ -162,7 +176,7 @@ export default function reducer(state, action) {
                     width: action.payload.value,
                 }
             }
-        case ACTIONS.setEarsHeight:
+        case ACTIONS.ears.height:
             return {
                 ...state,
                 ears: {

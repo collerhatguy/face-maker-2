@@ -1,6 +1,14 @@
 import React from 'react'
 
-export default function ColorInput({bodyPart, changeColor}) {
+export default function ColorInput({bodyPart, dispatch, ACTIONS}) {
+    const changePart = (value) => {
+        dispatch({
+            type: ACTIONS[bodyPart]["color"], 
+            payload: {
+                value: value
+            }
+        })
+    }
     return (
         <div>
             <label for={`${bodyPart}color`}>Color: </label>
@@ -8,7 +16,7 @@ export default function ColorInput({bodyPart, changeColor}) {
                 type="color"
                 id={`${bodyPart}color`}
                 name={`${bodyPart}color`}
-                onChange={e => {changeColor(e.target.value)}}
+                onChange={e => {changePart(e.target.value)}}
             />
         </div>
     )

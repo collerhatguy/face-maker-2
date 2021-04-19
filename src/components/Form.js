@@ -4,86 +4,85 @@ import ColorInput from './ColorInput'
 import SizeInput from "./SizeInput";
 
 export default function Form({dispatch, ACTIONS}) {
-    const changePart = (value, action) => {
-        dispatch({
-            type: action, 
-            payload: {
-                value: value
-            }
-        })
-    }
+    
     return (
         <form>
             <fieldset>
                 <legend>Hair</legend>
                 <ColorInput 
                     bodyPart="hair" 
-                    changeColor={(value) => changePart(value, ACTIONS.setHairColor)} 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 />
                 <SizeInput 
                     bodyPart="hair"
-                    changeWidth={(value) => changePart(value, ACTIONS.setHairWidth)} 
-                    changeHeight={(value) => changePart(value, ACTIONS.setHairHeight)}
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 /> 
             </fieldset>
             <fieldset>
                 <legend>Head</legend>
                 <ColorInput 
-                    bodyPart="head"  
-                    changeColor={(value) => changePart(value, ACTIONS.setHeadColor)}
+                    bodyPart="head" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 />
                 <SizeInput 
                     bodyPart="head"
-                    changeWidth={(value) => changePart(value, ACTIONS.setHeadWidth)} 
-                    changeHeight={(value) => changePart(value, ACTIONS.setHeadHeight)}
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 /> 
             </fieldset>
             <fieldset>
                 <legend>Eyes</legend>
                 <ColorInput 
-                    bodyPart="eyes"  
-                    changeColor={(value) => changePart(value, ACTIONS.setEyeColor)}
+                    bodyPart="eyes" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 />
                 <SizeInput 
                     bodyPart="eyes"
-                    changeWidth={(value) => changePart(value, ACTIONS.setEyeWidth)} 
-                    changeHeight={(value) => changePart(value, ACTIONS.setEyeHeight)}
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 /> 
             </fieldset>
             <fieldset>
                 <legend>Nose</legend>
                 <ColorInput 
-                    bodyPart="nose"  
-                    changeColor={(value) => changePart(value, ACTIONS.setNoseColor)}
+                    bodyPart="nose" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 />
                 <SizeInput 
                     bodyPart="nose"
-                    changeWidth={(value) => changePart(value, ACTIONS.setNoseWidth)} 
-                    changeHeight={(value) => changePart(value, ACTIONS.setNoseHeight)}
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 /> 
             </fieldset>
             <fieldset>
                 <legend>Mouth</legend>
                 <ColorInput 
-                    bodyPart="mouth"  
-                    changeColor={(value) => changePart(value, ACTIONS.setMouthColor)}
+                    bodyPart="mouth" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 />
                 <SizeInput 
                     bodyPart="mouth"
-                    changeWidth={(value) => changePart(value, ACTIONS.setMouthWidth)} 
-                    changeHeight={(value) => changePart(value, ACTIONS.setMouthHeight)}
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 /> 
             </fieldset>
             <fieldset>
                 <legend>Ears</legend>
                 <ColorInput 
-                    bodyPart="ears"  
-                    changeColor={(value) => changePart(value, ACTIONS.setEarsColor)}
+                    bodyPart="ears" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 />
                 <SizeInput 
                     bodyPart="ears"
-                    changeWidth={(value) => changePart(value, ACTIONS.setEarsWidth)} 
-                    changeHeight={(value) => changePart(value, ACTIONS.setEarsHeight)}
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
                 /> 
             </fieldset>
         </form>
