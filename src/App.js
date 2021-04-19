@@ -5,45 +5,70 @@ import Head from "./components/Head";
 import Form from "./components/Form";
 
 const ACTIONS = {
-  setHair: "set-hair",
+  setHairColor: "set-hair-color",
+  setHairWidth: "set-hair-width",
+  setHairHeight: "set-hair-height",
   setHead: "set-head",
+  setEars: "set-eyes",
+  setNose: "set-nose",
+  setMouth: "set-mouth",
   setEars: "set-ears",
 } 
 function reducer(state, action) {
   switch (action.type) {
-      case ACTIONS.setHair:
+      case ACTIONS.setHairColor:
           return {
               ...state,
               hair: {
-                  backgroundColor: action.payload.color
+                  ...state.hair,
+                  backgroundColor: action.payload.value
               }
           }
-      case ACTIONS.setHead:
+      case ACTIONS.setHairWidth:
+          return {
+              ...state,
+              hair: {
+                ...state.hair,
+                width: action.payload.value
+              }
+          }
+      case ACTIONS.setHairHeight:
+          return {
+              ...state,
+              hair: {
+                ...state.hair,
+                height: action.payload.value
+              }
+          }
+      case ACTIONS.setHeadColor:
           return {
               ...state,
               head: {
-                  backgroundColor: action.payload.color
+                  ...state.head,
+                  backgroundColor: action.payload.value
+              }
+          }
+      case ACTIONS.setHeadHeight:
+          return {
+              ...state,
+              head: {
+                  ...state.head,
+                  height: action.payload.value
+              }
+          }
+      case ACTIONS.setHeadWidth:
+          return {
+              ...state,
+              head: {
+                  ...state.head,
+                  width: action.payload.value
               }
           }
       case ACTIONS.setEyes:
           return {
               ...state,
               eyes: {
-                  backgroundColor: action.payload.color
-              }
-          }
-      case ACTIONS.setEars:
-          return {
-              ...state,
-              ears: {
-                  backgroundColor: action.payload.color
-              }
-          }
-      case ACTIONS.setMouth:
-          return {
-              ...state,
-              mouth: {
-                  backgroundColor: action.payload.color
+                  backgroundColor: action.payload.value
               }
           }
   }

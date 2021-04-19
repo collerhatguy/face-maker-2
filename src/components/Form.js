@@ -1,13 +1,14 @@
 
 import React from 'react'
 import ColorInput from './ColorInput'
+import SizeInput from "./SizeInput";
 
 export default function Form({dispatch, ACTIONS}) {
     const changePart = (value, action) => {
         dispatch({
             type: action, 
             payload: {
-                color: value
+                value: value
             }
         })
     }
@@ -15,11 +16,27 @@ export default function Form({dispatch, ACTIONS}) {
         <form>
             <feildset>
                 <legend>Hair</legend>
-                <ColorInput bodyPart="hair" changeColor={(value) => changePart(value, ACTIONS.setHair)} />
+                <ColorInput 
+                    bodyPart="hair" 
+                    changeColor={(value) => changePart(value, ACTIONS.setHairColor)} 
+                />
+                <SizeInput 
+                    bodyPart="hair"
+                    changeWidth={(value) => changePart(value, ACTIONS.setHairWidth)} 
+                    changeHeight={(value) => changePart(value, ACTIONS.setHairHeight)}
+                /> 
             </feildset>
             <feildset>
                 <legend>Head</legend>
-                <ColorInput bodyPart="head"  changeColor={(value) => changePart(value, ACTIONS.setHead)}/>
+                <ColorInput 
+                    bodyPart="head"  
+                    changeColor={(value) => changePart(value, ACTIONS.setHeadColor)}
+                />
+                <SizeInput 
+                    bodyPart="head"
+                    changeWidth={(value) => changePart(value, ACTIONS.setHeadWidth)} 
+                    changeHeight={(value) => changePart(value, ACTIONS.setHeadHeight)}
+                /> 
             </feildset>
             <feildset>
                 <legend>Eyes</legend>
@@ -27,15 +44,12 @@ export default function Form({dispatch, ACTIONS}) {
             </feildset>
             <feildset>
                 <legend>Nose</legend>
-                <ColorInput bodyPart="nose"  changeColor={(value) => changePart(value, ACTIONS.setNose)}/>
             </feildset>
             <feildset>
                 <legend>Mouth</legend>
-                <ColorInput bodyPart="mouth"  changeColor={(value) => changePart(value, ACTIONS.setMouth)}/>
             </feildset>
             <feildset>
                 <legend>Ears</legend>
-                <ColorInput bodyPart="ears"  changeColor={(value) => changePart(value, ACTIONS.setEars)}/>
             </feildset>
         </form>
     )
