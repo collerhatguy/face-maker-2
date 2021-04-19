@@ -6,7 +6,7 @@ export default function SizeInput({bodyPart, changeHeight, changeWidth}) {
             <div>
                 <label for={`${bodyPart}width`}>Width:
                     <input 
-                        type="width"
+                        type="number"
                         id={`${bodyPart}width`}
                         name={`${bodyPart}width`}
                         onChange={e => {changeWidth(`${e.target.value}px`)}}
@@ -17,7 +17,7 @@ export default function SizeInput({bodyPart, changeHeight, changeWidth}) {
             <div>
                 <label for={`${bodyPart}height`}>Height:
                     <input 
-                        type="height"
+                        type="number"
                         id={`${bodyPart}height`}
                         name={`${bodyPart}height`}
                         onChange={e => {changeHeight(`${e.target.value}px`)}}

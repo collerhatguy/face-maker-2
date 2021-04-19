@@ -20,12 +20,21 @@ export default function Head({face}) {
             </div>
             <div 
                 class="eyes">
-                <div class="eye">
-                    <div className="iris"></div>
+                <div 
+                    style={face.eyes}
+                    class="eye">
+                    <div 
+                        style={face.eyes.iris}
+                        className="iris"></div>
                     <div className="pupil"></div>
                 </div>
-                <div class="eye">
-                    <div className="iris"></div>
+                <div 
+                    style={face.eyes}
+                    class="eye">
+                    <div 
+                        style={face.eyes.iris}
+                        className="iris">
+                    </div>
                     <div className="pupil"></div>
                 </div>
             </div>

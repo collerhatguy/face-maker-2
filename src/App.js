@@ -11,70 +11,118 @@ const ACTIONS = {
   setHeadColor: "set-head-color",
   setHeadWidth: "set-head-width",
   setHeadHeight: "set-head-height",
-  setHead: "set-head",
+  setEyeColor: "set-eye-color",
+  setEyeWidth: "set-eye-width",
+  setEyeHeight: "set-eye-height",
+  setNoseColor: "set-nose-color",
+  setNoseWidth: "set-nose-width",
+  setNoseHeight: "set-nose-height",
   setEars: "set-eyes",
-  setNose: "set-nose",
   setMouth: "set-mouth",
   setEars: "set-ears",
 } 
 function reducer(state, action) {
-  switch (action.type) {
-      case ACTIONS.setHairColor:
-          return {
-              ...state,
-              hair: {
-                  ...state.hair,
-                  backgroundColor: action.payload.value
-              }
-          }
-      case ACTIONS.setHairWidth:
-          return {
-              ...state,
-              hair: {
-                ...state.hair,
-                width: action.payload.value
-              }
-          }
-      case ACTIONS.setHairHeight:
-          return {
-              ...state,
-              hair: {
-                ...state.hair,
-                height: action.payload.value
-              }
-          }
-      case ACTIONS.setHeadColor:
-          return {
-              ...state,
-              head: {
-                  ...state.head,
-                  backgroundColor: action.payload.value
-              }
-          }
-      case ACTIONS.setHeadHeight:
-          return {
-              ...state,
-              head: {
-                  ...state.head,
-                  height: action.payload.value
-              }
-          }
-      case ACTIONS.setHeadWidth:
-          return {
-              ...state,
-              head: {
-                  ...state.head,
-                  width: action.payload.value
-              }
-          }
-      case ACTIONS.setEyes:
-          return {
-              ...state,
-              eyes: {
-                  backgroundColor: action.payload.value
-              }
-          }
-  }
+    switch (action.type) {
+        case ACTIONS.setHairColor:
+            return {
+                ...state,
+                hair: {
+                    ...state.hair,
+                    backgroundColor: action.payload.value
+                }
+            }
+        case ACTIONS.setHairWidth:
+            return {
+                ...state,
+                hair: {
+                    ...state.hair,
+                    width: action.payload.value
+                }
+            }
+        case ACTIONS.setHairHeight:
+            return {
+                ...state,
+                hair: {
+                    ...state.hair,
+                    height: action.payload.value
+                }
+            }
+        case ACTIONS.setHeadColor:
+            return {
+                ...state,
+                head: {
+                    ...state.head,
+                    backgroundColor: action.payload.value
+                }
+            }
+        case ACTIONS.setHeadHeight:
+            return {
+                ...state,
+                head: {
+                    ...state.head,
+                    height: action.payload.value
+                }
+            }
+        case ACTIONS.setHeadWidth:
+            return {
+                ...state,
+                head: {
+                    ...state.head,
+                    width: action.payload.value
+                }
+            }
+        case ACTIONS.setEyeColor:
+            return {
+                ...state,
+                eyes: {
+                    ...state.eyes,
+                    iris: {
+                        backgroundColor: action.payload.value,
+                    }
+                }
+            }
+        case ACTIONS.setEyeWidth:
+            return {
+                ...state,
+                eyes: {
+                    ...state.eyes,
+                    width: action.payload.value,
+                }
+            }
+        case ACTIONS.setEyeHeight:
+            return {
+                ...state,
+                eyes: {
+                    ...state.eyes,
+                    height: action.payload.value,
+                }
+            }
+        case ACTIONS.setNoseColor:
+            return {
+                ...state,
+                nose: {
+                    ...state.nose,
+                    borderColor: action.payload.value,
+                }
+            }
+        case ACTIONS.setNoseWidth:
+            return {
+                ...state,
+                nose: {
+                    ...state.nose,
+                    width: action.payload.value,
+                }
+            }
+        case ACTIONS.setNoseHeight:
+            return {
+                ...state,
+                nose: {
+                    ...state.nose,
+                    height: action.payload.value,
+                }
+            }
+        default: return state;
+    }
 }
 function App() {
   const intialState = {

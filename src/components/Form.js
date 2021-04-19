@@ -40,10 +40,27 @@ export default function Form({dispatch, ACTIONS}) {
             </feildset>
             <feildset>
                 <legend>Eyes</legend>
-                <ColorInput bodyPart="eyes"  changeColor={(value) => changePart(value, ACTIONS.setEyes)}/>
+                <ColorInput 
+                    bodyPart="eyes"  
+                    changeColor={(value) => changePart(value, ACTIONS.setEyeColor)}
+                />
+                <SizeInput 
+                    bodyPart="eyes"
+                    changeWidth={(value) => changePart(value, ACTIONS.setEyeWidth)} 
+                    changeHeight={(value) => changePart(value, ACTIONS.setEyeHeight)}
+                /> 
             </feildset>
             <feildset>
                 <legend>Nose</legend>
+                <ColorInput 
+                    bodyPart="nose"  
+                    changeColor={(value) => changePart(value, ACTIONS.setNoseColor)}
+                />
+                <SizeInput 
+                    bodyPart="nose"
+                    changeWidth={(value) => changePart(value, ACTIONS.setNoseWidth)} 
+                    changeHeight={(value) => changePart(value, ACTIONS.setNoseHeight)}
+                /> 
             </feildset>
             <feildset>
                 <legend>Mouth</legend>
