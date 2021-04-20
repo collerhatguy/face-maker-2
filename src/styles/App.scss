@@ -4,8 +4,9 @@
 // 2. variables
 // 3. mixins
 // 4. centering
-// 5. form
-// 6. media queries
+// 5. forms
+// 6. nav bar
+// 7. media queries
 
 // 1. default stats
 *, *::before, *::after {
@@ -36,7 +37,7 @@ $base-font-size: 10px;
 
 @import "./faceDefault";
   
-// 5. form
+// 5. forms
 form {
   padding: .2em;
   margin: .2em;
@@ -61,8 +62,39 @@ form {
     margin: .2em;
   }
 }
+.account-form {
+  width: 100vw;
+  height: 100vh;
+}
 
-// 6. media queries
+// 6. nav bar
+header {
+  position: relative;
+}
+nav {
+  max-width: fit-content;
+  min-width: 50px;
+  height: 50px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: solid 3px $secondary-color;
+  border-radius: 10px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  a {
+    display: none;
+  }
+  &:hover a {
+    @include font-size(1);
+    display: block;
+    text-decoration: none;
+    padding: .2em;
+    text-align: center;
+  }
+}
+
+// 7. media queries
 @media only screen and (max-width: 480px) {
   form {
     display: flex;

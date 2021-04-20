@@ -3,7 +3,7 @@ import React from 'react'
 export default function AccountCreationPage() {
     return (
         <div>
-            <form>
+            <form className="account-form">
                 <fieldset>
                     <legend>Create Account</legend>
                     <label for="name">
