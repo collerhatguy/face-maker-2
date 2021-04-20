@@ -14,7 +14,9 @@ export default function LoginPage() {
                             Password:
                             <input type="text" name="password" id="password" placeholder="your password"/>
                         </label>
-                        <button type="submit">Submit</button>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
                 </fieldset>
             </form>
         </div>
