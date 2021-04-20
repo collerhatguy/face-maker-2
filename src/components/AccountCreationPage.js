@@ -14,6 +14,7 @@ export default function AccountCreationPage() {
                         Password:
                         <input type="text" name="password" id="password" placeholder="your password"/>
                     </label>
+                    <button type="submit">Submit</button>
                 </fieldset>
             </form>
         </div>

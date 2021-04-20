@@ -227,6 +227,52 @@ form input {
   height: 100vh;
 }
 
+.account-form fieldset {
+  width: 90vw;
+  height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 20px (1fr)[3];
+      grid-template-rows: 20px repeat(3, 1fr);
+}
+
+.account-form fieldset label {
+  text-align: center;
+  display: block;
+}
+
+.account-form fieldset label input {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: #bad9e8;
+  color: #0f242e;
+}
+
+.account-form fieldset label input:focus {
+  outline: none;
+}
+
+.account-form fieldset label button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: #bad9e8;
+  color: #0f242e;
+}
+
+.account-form fieldset label button:focus {
+  outline: none;
+}
+
 header {
   position: relative;
 }
@@ -254,11 +300,13 @@ nav a {
 }
 
 nav:hover a {
-  font-size: 32.36px;
+  font-size: 16.18px;
   display: block;
   text-decoration: none;
   padding: .2em;
   text-align: center;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 nav:hover a:hover {

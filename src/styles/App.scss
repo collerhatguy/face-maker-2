@@ -65,6 +65,35 @@ form {
 .account-form {
   width: 100vw;
   height: 100vh;
+  fieldset {
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px repeat(3, 1fr);
+    label {
+      text-align: center;
+      display: block;
+      input {
+        width: min-content;
+        height: min-content;
+        background-color: $primary-color;
+        color: $secondary-color;
+        &:focus {
+          outline: none;  
+        }
+      }
+      button {
+        width: fit-content;
+        height: min-content;
+        background-color: $primary-color;
+        color: $secondary-color;
+        &:focus {
+          outline: none;  
+        }
+      }
+    }
+  }
 }
 
 // 6. nav bar
@@ -87,11 +116,12 @@ nav {
     display: none;
   }
   &:hover a {
-    @include font-size(2);
+    @include font-size(1);
     display: block;
     text-decoration: none;
     padding: .2em;
     text-align: center;
+    transition-duration: 300ms;
     &:hover {
       background-color: $secondary-color;
       color: $primary-color;
