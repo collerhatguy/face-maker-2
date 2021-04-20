@@ -1,31 +1,21 @@
-import React, {useReducer, useEffect} from "react";
+import React from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import AppPage from "./components/AppPage";
+import AccountCreationPage from "./components/AccountCreationPage";
 
 import './styles/App.css';
-import Head from "./components/Head";
-import Form from "./components/Form";
-import reducer, { ACTIONS } from "./reducer";
 
 
 function App() {
-  const intialState = {
-    hair: {},
-    head: {},
-    brows: {},
-    eyes: {},
-    ears: {},
-    nose: {},
-    mouth: {},
-  }
-  const [face, dispatch] = useReducer(reducer, intialState);
-  
-  useEffect(() => {
-      console.log(face);
-  }, [face]);
   return (
-    <div className="App">
-      <Head face={face} />
-      <Form dispatch={dispatch} ACTIONS={ACTIONS} />
-    </div>
+    <Router>
+      <Switch>
+        <div className="App">
+          <Route path="/" component={AppPage} />
+          <Route path="/create-account" component={AccountCreationPage} />
+        </div>
+      </Switch>
+    </Router>
   );
 }
 
