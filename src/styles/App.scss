@@ -72,9 +72,10 @@ header {
   position: relative;
 }
 nav {
-  max-width: fit-content;
   min-width: 50px;
-  height: 50px;
+  min-height: 50px;
+  max-height: min-content;
+  max-width: max-content;
   background-color: $primary-color;
   color: $secondary-color;
   border: solid 3px $secondary-color;
@@ -86,11 +87,15 @@ nav {
     display: none;
   }
   &:hover a {
-    @include font-size(1);
+    @include font-size(2);
     display: block;
     text-decoration: none;
     padding: .2em;
     text-align: center;
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
   }
 }
 
