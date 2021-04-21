@@ -179,8 +179,8 @@ export default function reducer(state, action) {
                 }
             }
         case ACTIONS.ears.height:
-            return {
-                ...state,
+                return {
+                    ...state,
                 ears: {
                     ...state.ears,
                     height: `${action.payload.value}px`,
