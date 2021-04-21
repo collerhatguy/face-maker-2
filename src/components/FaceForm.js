@@ -3,7 +3,7 @@ import React from 'react'
 import ColorInput from './ColorInput'
 import SizeInput from "./SizeInput";
 
-export default function Form({dispatch, ACTIONS}) {
+export default function FaceForm({dispatch, ACTIONS}) {
     
     return (
         <form>
