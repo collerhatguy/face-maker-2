@@ -25,7 +25,7 @@ export default function SizeInput({bodyPart, dispatch, ACTIONS}) {
                         type="number"
                         id={`${bodyPart}width`}
                         name={`${bodyPart}width`}
-                        onChange={e => {changeWidth(`${e.target.value}px`)}}
+                        onChange={e => {changeWidth(e.target.value)}}
                     />
                     px
                 </label>
@@ -36,7 +36,7 @@ export default function SizeInput({bodyPart, dispatch, ACTIONS}) {
                         type="number"
                         id={`${bodyPart}height`}
                         name={`${bodyPart}height`}
-                        onChange={e => {changeHeight(`${e.target.value}px`)}}
+                        onChange={e => {changeHeight(e.target.value)}}
                     />
                     px
                 </label>

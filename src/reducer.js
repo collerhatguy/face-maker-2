@@ -51,7 +51,7 @@ export default function reducer(state, action) {
                 ...state,
                 hair: {
                     ...state.hair,
-                    width: action.payload.value
+                    width: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.hair.height:
@@ -59,7 +59,7 @@ export default function reducer(state, action) {
                 ...state,
                 hair: {
                     ...state.hair,
-                    height: action.payload.value
+                    height: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.head.color:
@@ -75,7 +75,7 @@ export default function reducer(state, action) {
                 ...state,
                 head: {
                     ...state.head,
-                    height: action.payload.value
+                    height: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.head.width:
@@ -83,7 +83,8 @@ export default function reducer(state, action) {
                 ...state,
                 head: {
                     ...state.head,
-                    width: action.payload.value
+                    width: `${action.payload.value}px`,
+                    widthNum: action.payload.value,
                 }
             }
         case ACTIONS.eyes.color:
@@ -101,7 +102,7 @@ export default function reducer(state, action) {
                 ...state,
                 eyes: {
                     ...state.eyes,
-                    width: action.payload.value,
+                    width: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.eyes.height:
@@ -109,7 +110,7 @@ export default function reducer(state, action) {
                 ...state,
                 eyes: {
                     ...state.eyes,
-                    height: action.payload.value,
+                    height: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.nose.color:
@@ -125,7 +126,7 @@ export default function reducer(state, action) {
                 ...state,
                 nose: {
                     ...state.nose,
-                    width: action.payload.value,
+                    width: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.nose.height:
@@ -133,7 +134,7 @@ export default function reducer(state, action) {
                 ...state,
                 nose: {
                     ...state.nose,
-                    height: action.payload.value,
+                    height: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.mouth.color:
@@ -149,7 +150,7 @@ export default function reducer(state, action) {
                 ...state,
                 mouth: {
                     ...state.mouth,
-                    width: action.payload.value,
+                    width: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.mouth.height:
@@ -157,7 +158,7 @@ export default function reducer(state, action) {
                 ...state,
                 mouth: {
                     ...state.mouth,
-                    height: action.payload.value,
+                    height: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.ears.color:
@@ -173,7 +174,8 @@ export default function reducer(state, action) {
                 ...state,
                 ears: {
                     ...state.ears,
-                    width: action.payload.value,
+                    width: `${action.payload.value}px`,
+                    widthApart: `${action.payload.value + state.head.widthNum}px`
                 }
             }
         case ACTIONS.ears.height:
@@ -181,7 +183,7 @@ export default function reducer(state, action) {
                 ...state,
                 ears: {
                     ...state.ears,
-                    height: action.payload.value,
+                    height: `${action.payload.value}px`,
                 }
             }
         default: return state;

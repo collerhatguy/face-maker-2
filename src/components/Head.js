@@ -51,6 +51,7 @@ export default function Head({face}) {
                     style={face.mouth}
                     class="mouth"></div>
                 <div 
+                    style={{width: face.ears.widthApart}}
                     class="ears">
                     <div 
                         style={face.ears}
