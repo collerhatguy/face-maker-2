@@ -9,9 +9,14 @@ export default function Head({face}) {
                 <div
                     style={face.hair} 
                     class="hair">
+                        <div style={{backgroundColor: face.hair.backgroundColor}} className="hair-piece"></div>
+                        <div style={{backgroundColor: face.hair.backgroundColor}} className="hair-piece"></div>
                     <div 
                         style={face.hair} 
-                        class="hair-corner"></div>
+                        class="hair-corner">
+                            <div style={{backgroundColor: face.hair.backgroundColor}} className="hair-corner-piece"></div>
+                            <div style={{backgroundColor: face.hair.backgroundColor}} className="hair-corner-piece"></div>
+                        </div>
                 </div>
                 <div 
                     style={face.brows} 

@@ -122,41 +122,52 @@ $hair-color: hsl(27, 33%, 28%);
     background-color: $hair-color;
     margin-bottom: 300px;
     border-radius: 50% 100% 0 0;
+    .hair-piece {
+        position: absolute;
+        background-color: $hair-color;
+        height: 100px;
+        width: 10px;
+        transform: translateY(100%);
+        &:first-child {
+            right: 0;
+        }
+    }
 }
 
-.hair::before,
-.hair::after {
-content: '';
-    position: absolute;
-    background-color: $hair-color;
-    height: 100px;
-    width: 10px;
-    transform: translateY(100%);
-}
-
-.hair::after {
-    right: 0;
-}
 
 .hair-corner {
     position: absolute;
     width: 100%;
+    .hair-corner-piece {
+        position: absolute;
+        width: 14px;
+        height: 20px;
+        transform: rotate(45deg);
+        background-color: $hair-color;
+        top: 115px;
+        left: 5px;
+        &:first-child {
+            left: initial;
+            right: 5px;
+            transform: rotate(-45deg);
+        }
+    }
 }
 
-.hair-corner::before,
-.hair-corner::after {
-content: '';
-    position: absolute;
-    width: 14px;
-    height: 20px;
-    transform: rotate(45deg);
-    background-color: $hair-color;
-    top: 115px;
-    left: 5px;
-}
+// .hair-corner::before,
+// .hair-corner::after {
+// content: '';
+//     position: absolute;
+//     width: 14px;
+//     height: 20px;
+//     transform: rotate(45deg);
+//     background-color: $hair-color;
+//     top: 115px;
+//     left: 5px;
+// }
 
-.hair-corner::after {
-    left: initial;
-    right: 5px;
-    transform: rotate(-45deg);
-}
+// .hair-corner::after {
+//     left: initial;
+//     right: 5px;
+//     transform: rotate(-45deg);
+// }
