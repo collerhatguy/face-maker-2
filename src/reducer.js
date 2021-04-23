@@ -15,6 +15,11 @@ export const ACTIONS = {
         width: "set-eye-width",
         height: "set-eye-height",
     },
+    eyeBrow: {
+        color: "set-brow-color",
+        width: "set-brow-width",
+        height: "set-brow-height",
+    },
     nose: {
         color: "set-nose-color",
         width: "set-nose-width",
@@ -111,6 +116,30 @@ export default function reducer(state, action) {
                 eyes: {
                     ...state.eyes,
                     height: `${action.payload.value}px`,
+                }
+            }
+        case ACTIONS.eyeBrow.color:
+            return {
+                ...state,
+                eyeBrow: {
+                    ...state.eyeBrow,
+                    borderColor: action.payload.value,
+                }
+            }
+        case ACTIONS.eyeBrow.width:
+            return {
+                ...state,
+                eyeBrow: {
+                    ...state.eyeBrow,
+                    borderTopWidth: `${action.payload.value}px`,
+                }
+            }
+        case ACTIONS.eyeBrow.height:
+            return {
+                ...state,
+                eyeBrow: {
+                    ...state.eyeBrow,
+                    borderTopHeight: `${action.payload.value}px`,
                 }
             }
         case ACTIONS.nose.color:

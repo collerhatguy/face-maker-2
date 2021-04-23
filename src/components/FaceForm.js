@@ -1,0 +1,103 @@
+
+import React from 'react'
+import ColorInput from './ColorInput'
+import SizeInput from "./SizeInput";
+
+export default function FaceForm({dispatch, ACTIONS}) {
+    
+    return (
+        <form>
+            <fieldset>
+                <legend>Hair</legend>
+                <ColorInput 
+                    bodyPart="hair" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                />
+                <SizeInput 
+                    bodyPart="hair"
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                /> 
+            </fieldset>
+            <fieldset>
+                <legend>Head</legend>
+                <ColorInput 
+                    bodyPart="head" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                />
+                <SizeInput 
+                    bodyPart="head"
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                /> 
+            </fieldset>
+            <fieldset>
+                <legend>Eyes</legend>
+                <ColorInput 
+                    bodyPart="eyes" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                />
+                <SizeInput 
+                    bodyPart="eyes"
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                /> 
+            </fieldset>
+            <fieldset>
+                <legend>Eye Brows</legend>
+                <ColorInput 
+                    bodyPart="eyeBrow" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                />
+                <SizeInput 
+                    bodyPart="eyeBrow"
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                /> 
+            </fieldset>
+            <fieldset>
+                <legend>Nose</legend>
+                <ColorInput 
+                    bodyPart="nose" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                />
+                <SizeInput 
+                    bodyPart="nose"
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                /> 
+            </fieldset>
+            <fieldset>
+                <legend>Mouth</legend>
+                <ColorInput 
+                    bodyPart="mouth" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                />
+                <SizeInput 
+                    bodyPart="mouth"
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                /> 
+            </fieldset>
+            <fieldset>
+                <legend>Ears</legend>
+                <ColorInput 
+                    bodyPart="ears" 
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                />
+                <SizeInput 
+                    bodyPart="ears"
+                    dispatch={dispatch}
+                    ACTIONS={ACTIONS}
+                /> 
+            </fieldset>
+        </form>
+    )
+}
