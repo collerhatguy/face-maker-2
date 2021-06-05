@@ -52,6 +52,15 @@ table {
   max-width: 100%;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
 .head-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,18 +256,18 @@ form {
 }
 
 form fieldset {
-  font-size: 48.54px;
+  font-size: 4.854rem;
   color: #bad9e8;
   padding: .2em;
   margin: .2em;
 }
 
 form label {
-  font-size: 32.36px;
+  font-size: 3.236rem;
 }
 
 form input {
-  font-size: 32.36px;
+  font-size: 3.236rem;
   width: 100px;
   height: 30px;
   padding: .2em;
