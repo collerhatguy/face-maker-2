@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Head({face}) {
     return (
-        <div className="head-container">
+        <section className="head-container">
             <div
                 style={face.head} 
                 class="head">
@@ -61,6 +61,6 @@ export default function Head({face}) {
                         class="ear"></div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

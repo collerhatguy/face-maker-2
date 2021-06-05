@@ -22,10 +22,10 @@ function App() {
       console.log(face);
   }, [face]);
   return (
-    <div className="App">
+    <main className="App">
       <Head face={face} />
       <Form dispatch={dispatch} ACTIONS={ACTIONS} />
-    </div>
+    </main>
   );
 }
 
