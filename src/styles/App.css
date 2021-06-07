@@ -13,7 +13,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
-  border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -71,9 +70,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background-color: #bad9e8;
+  padding: 5%;
 }
 
 .head {
@@ -244,8 +243,8 @@ body {
 }
 
 form {
-  padding: .2em;
-  margin: .2em;
+  padding: .2rem;
+  margin: .2rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -258,8 +257,9 @@ form {
 form fieldset {
   font-size: 4.854rem;
   color: #bad9e8;
-  padding: .2em;
-  margin: .2em;
+  padding: .2rem;
+  padding-left: 3rem;
+  margin: .2rem;
 }
 
 form label {
@@ -270,8 +270,12 @@ form input {
   font-size: 3.236rem;
   width: 100px;
   height: 30px;
-  padding: .2em;
-  margin: .2em;
+  padding: .2rem;
+  margin: .2rem;
+}
+
+form input[type="color"] {
+  width: 50px;
 }
 
 @media only screen and (max-width: 480px) {

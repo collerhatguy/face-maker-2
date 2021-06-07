@@ -25,17 +25,17 @@ $base-font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background-color: $primary-color;
+  padding: 5%;
 }
 
 @import "./faceDefault";
   
 // 5. form
 form {
-  padding: .2em;
-  margin: .2em;
+  padding: .2rem;
+  margin: .2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -43,8 +43,9 @@ form {
   fieldset {
     @include font-size(3);
     color: $primary-color;
-    padding: .2em;
-    margin: .2em;
+    padding: .2rem;
+    padding-left: 3rem;
+    margin: .2rem;
   }
   label {
     @include font-size(2);
@@ -53,8 +54,11 @@ form {
     @include font-size(2);
     width: 100px;
     height: 30px;
-    padding: .2em;
-    margin: .2em;
+    padding: .2rem;
+    margin: .2rem;
+  }
+  input[type="color"] {
+    width: 50px;
   }
 }
 
